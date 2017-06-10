@@ -21,3 +21,15 @@
         transform: rotate(360deg);
     }
 }
+
+.container {
+    text-align: center;
+}
+
+.card {
+    width: 20 rem;
+}
+
+img {
+    width: 100%;
+}
