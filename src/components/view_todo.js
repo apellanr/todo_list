@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
-import { get_one, delete_todo } from '../actions/index';
 import SF from './imgs/sanFrancisco.jpg';
+import * as actions from '../actions/index';
+// import { get_one, delete_todo, toggle_complete } from '../actions/index';
+
 
 class ViewTodo extends Component {
     
@@ -16,6 +18,11 @@ class ViewTodo extends Component {
         this.props.delete_todo(this.props.todo._id).then(() => {
             this.props.history.push('/');
         });
+    }
+
+    handleComplete() {
+        console.info('toggle complete clicked!');
+        this.props.toggle_complete(this.props.todo._id);
     }
 
     render() {
@@ -32,6 +39,8 @@ class ViewTodo extends Component {
                 <Link to="/" className="btn btn-outline-primary">Back To List</Link>
                 <h1>Title: {todo.title}</h1>
                 <p>Details: {todo.details}</p> 
+                <p>Item Completed: <b>{todo.complete ? 'Completed' : 'Not completed'}</b></p>
+                <button className={`btn btn-outline-${todo.complete ? 'danger' : 'info' }`} onClick={() => this.handleComplete()}>{todo.complete ? 'Restore' : 'Complete'}</button>
                 <button className="btn btn-danger" onClick={ () => this.handleDelete() }>Delete</button>
             </div>    
         )
@@ -44,4 +53,4 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps, {get_one, delete_todo})(ViewTodo);
+export default connect(mapStateToProps, actions)(ViewTodo);
