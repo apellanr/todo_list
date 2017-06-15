@@ -8,6 +8,7 @@ import Navbar from './navbar';
 import ViewList from './view_list';
 import ViewTodo from './view_todo';
 import AddToDo from './add_form';
+import Footer from './footer';
 import './app.css';
 
 const App = () => (
@@ -20,6 +21,7 @@ const App = () => (
                 <Route path="/todo/:id" component={ViewTodo}/>
                 <Route path="/add-todo" component={AddToDo}/>
             </div>
+            <Footer />
         </div>
     </Router>
 );
