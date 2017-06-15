@@ -17,11 +17,11 @@ class AddForm extends Component {
         const { handleSubmit } = this.props;
         return (
         <div>    
-            <h3 className="add-header">Add Item</h3>
+            <h3 className="add-header add">Add Item</h3>
             <div className="container">
                 <form onSubmit={handleSubmit((values) => this.onFormSubmit(values) )}>
                     <div className="form-group row">
-                        <label className="col-sm-2 col-form-label">Title</label>
+                        <label className="col-sm-2 col-form-label add">Title</label>
                         <div className="col-sm-10">
                             <Field
                             className="form-control"
@@ -33,7 +33,7 @@ class AddForm extends Component {
                         </div>
                     </div>
                     <div className="form-group row">
-                        <label className="col-sm-2 col-form-label">Details</label>
+                        <label className="col-sm-2 col-form-label add">Details</label>
                         <div className="col-sm-10">
                             <Field
                             className="form-control"

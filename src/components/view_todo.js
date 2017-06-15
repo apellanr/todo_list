@@ -41,7 +41,7 @@ class ViewTodo extends Component {
                     <div className="card-block">
                         <h2>Title: { todo.title }</h2>
                         <h4>Details: { todo.details } </h4>
-                        <p>Item Completed: <b>{todo.complete ? 'Completed' : 'Not completed'}</b></p>
+                        <p>Item Completed: <b>{todo.complete ? `${new Date(parseInt(this.props.todo.completed))}` : 'Not completed'}</b></p>
                     </div>
                 </div>
                     <button className={`btn btn-${todo.complete ? 'danger' : 'info' }`} onClick={() => this.handleComplete()}>{todo.complete ? 'Restore' : 'Complete'}</button>
