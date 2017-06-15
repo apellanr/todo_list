@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const footer = () => {
     return (
         <nav className="navbar fixed-bottom navbar-light bg-faded">
-              <Link className="navbar-brand text-center" to="/"><i className="fa fa-copyright copyright"></i> narwhalDev</Link>
+              <a className="navbar-brand text-center" href="https://github.com/apellanr"><i className="fa fa-copyright copyright"></i> narwhalDev</a>
         </nav>
     )
 }
