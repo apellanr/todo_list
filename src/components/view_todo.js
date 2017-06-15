@@ -36,12 +36,15 @@ class ViewTodo extends Component {
 
         return (
             <div>
-                <Link to="/" className="btn btn-outline-primary">Back To List</Link>
-                <h1>Title: {todo.title}</h1>
-                <p>Details: {todo.details}</p> 
-                <p>Item Completed: <b>{todo.complete ? 'Completed' : 'Not completed'}</b></p>
-                <button className={`btn btn-outline-${todo.complete ? 'danger' : 'info' }`} onClick={() => this.handleComplete()}>{todo.complete ? 'Restore' : 'Complete'}</button>
-                <button className="btn btn-danger" onClick={ () => this.handleDelete() }>Delete</button>
+                <Link to="/" className="btn btn-primary">Back To List</Link>
+                <div className="card">
+                    <div className="card-block">
+                        <h2>Title: {todo.title}</h2>
+                        <p>Item Completed: <b>{todo.complete ? 'Completed' : 'Not completed'}</b></p>
+                    </div>
+                </div>
+                    <button className={`btn btn-${todo.complete ? 'danger' : 'info' }`} onClick={() => this.handleComplete()}>{todo.complete ? 'Restore' : 'Complete'}</button>
+                    <button className="btn btn-danger" onClick={ () => this.handleDelete() }>Delete</button>
             </div>    
         )
     }

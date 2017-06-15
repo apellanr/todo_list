@@ -17,7 +17,7 @@ class AddForm extends Component {
         const { handleSubmit } = this.props;
         return (
         <div>    
-            <h3 className="add-header">Add a To Do Item</h3>
+            <h3 className="add-header">Add Item</h3>
             <div className="container">
                 <form onSubmit={handleSubmit((values) => this.onFormSubmit(values) )}>
                     <div className="form-group row">
@@ -45,8 +45,8 @@ class AddForm extends Component {
                         </div>
                         
                     </div>
-                    <button className="btn btn-outline-success">Add Item</button>
-                    <Link to="/" className="btn btn-outline-danger">Cancel</Link>
+                    <button className="btn btn-success">Add Item</button>
+                    <Link to="/" className="btn btn-danger">Cancel</Link>
                 </form>
             </div> 
         </div>    

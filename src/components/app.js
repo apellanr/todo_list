@@ -14,8 +14,8 @@ const App = () => (
     <Router>
         <div>
             <Navbar />
-            <div className="container">
-                <Link to="/add-todo" className="btn btn-outline-success">Add To Do</Link>
+            <div className="container text-center">
+                <Link to="/add-todo" className="btn btn-success addBtn">Add To Do</Link>
                 <Route exact path="/" component={ViewList}/>
                 <Route path="/todo/:id" component={ViewTodo}/>
                 <Route path="/add-todo" component={AddToDo}/>
