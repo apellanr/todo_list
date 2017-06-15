@@ -45,8 +45,8 @@ class AddForm extends Component {
                         </div>
                         
                     </div>
-                    <button className="btn btn-success">Add Item</button>
-                    <Link to="/" className="btn btn-danger">Cancel</Link>
+                    <button className="btn btn-info">Add Item</button>
+                    <Link to="/" className="btn btn-warning">Cancel</Link>
                 </form>
             </div> 
         </div>    

@@ -39,12 +39,13 @@ class ViewTodo extends Component {
                 <Link to="/" className="btn btn-primary">Back To List</Link>
                 <div className="card">
                     <div className="card-block">
-                        <h2>Title: {todo.title}</h2>
+                        <h2>Title: { todo.title }</h2>
+                        <h4>Details: { todo.details } </h4>
                         <p>Item Completed: <b>{todo.complete ? 'Completed' : 'Not completed'}</b></p>
                     </div>
                 </div>
                     <button className={`btn btn-${todo.complete ? 'danger' : 'info' }`} onClick={() => this.handleComplete()}>{todo.complete ? 'Restore' : 'Complete'}</button>
-                    <button className="btn btn-danger" onClick={ () => this.handleDelete() }>Delete</button>
+                    <button className="btn btn-warning" onClick={ () => this.handleDelete() }>Delete</button>
             </div>    
         )
     }

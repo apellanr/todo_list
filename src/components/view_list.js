@@ -18,7 +18,7 @@ class ViewList extends Component {
             )
         });
         return (
-            <div>
+            <div className="list-holder">
                 <ul className="list-group">
                     { list }
                 </ul>

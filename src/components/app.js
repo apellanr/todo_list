@@ -15,7 +15,7 @@ const App = () => (
         <div>
             <Navbar />
             <div className="container text-center">
-                <Link to="/add-todo" className="btn btn-success addBtn">Add To Do</Link>
+                {/*<Link to="/add-todo" className="btn btn-success addBtn">Add To Do</Link>*/}
                 <Route exact path="/" component={ViewList}/>
                 <Route path="/todo/:id" component={ViewTodo}/>
                 <Route path="/add-todo" component={AddToDo}/>
