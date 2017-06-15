@@ -25,12 +25,13 @@ class ViewTodo extends Component {
         this.props.toggle_complete(this.props.todo._id);
     }
 
-    handleDateStamp() {
-       let d = new Date();
-       var mm = d.getMonth() + 1;
-       var dd = d.getDate();
-       var yy = d.getFullYear();
-       return `${yy}-${mm}-${dd}`;
+    handleDateStamp(time) {
+    //    let d = new Date();
+    //    var mm = d.getMonth() + 1;
+    //    var dd = d.getDate();
+    //    var yy = d.getFullYear();
+    //    return `${yy}-${mm}-${dd}`;
+    return new Date(Number(time)).toLocaleDateString();
     }
 
     handleTimeStamp() {
@@ -54,7 +55,7 @@ class ViewTodo extends Component {
                     <div className="card-block">
                         <h2>Title: { todo.title }</h2>
                         <h4>Details: { todo.details } </h4>
-                        <p>Item Completed: <b>{todo.complete ? `${this.handleDateStamp()} at ${this.handleTimeStamp()}` : 'Not completed'}</b></p>
+                        <p>Item Completed: <b>{todo.complete ? `${this.handleDateStamp(todo.completed)} at ${this.handleTimeStamp()}` : 'Not completed'}</b></p>
                     </div>
                 </div>
                     <button className={`btn btn-${todo.complete ? 'danger' : 'info' }`} onClick={() => this.handleComplete()}>{todo.complete ? 'Restore' : 'Complete'}</button>
